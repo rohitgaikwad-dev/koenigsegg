@@ -4,6 +4,7 @@
   font-family: poppins;
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
@@ -13,11 +14,25 @@ body {
 #main {
   width: 100%;
   height: 100vh;
+  overflow: hidden;
+}
+
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 #back {
   width: 100%;
   height: 100vh;
+}
+
+#back img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
 }
 
 #front {
@@ -26,7 +41,7 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: black;
+  pointer-events: none;
 }
 
 #content {
@@ -52,7 +67,9 @@ body {
 }
 
 .lnav img {
-  height: 60px;
+  padding-left: 20px;
+  margin-right: -20px;
+  height: 80px;
 }
 
 .lnav a,
@@ -63,6 +80,7 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
   color: #fff;
+  pointer-events: all;
 }
 
 .hero {
@@ -80,11 +98,19 @@ body {
 }
 
 .lhero .elem {
+  position: relative;
   height: 9vw;
   overflow: hidden;
 }
 
+.lhero .elem h1:nth-child(1) {
+  top: 0%;
+}
+
 .lhero .elem h1 {
+  position: absolute;
+  top: 100%;
+  left: 0;
   line-height: 0.9;
   font-family: "kajiro";
   color: #fff;
@@ -97,6 +123,7 @@ body {
   font-size: 3vw;
   margin-top: 2vw;
   font-family: "kajiro";
+  pointer-events: all;
 }
 
 .rhero {
@@ -117,7 +144,7 @@ body {
   width: 100%;
   height: 170px;
   margin: 20px 0px;
-  background-image: url(https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80);
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea401ecc-5e58-401f-bb54-6a351ed9f639/d5qrhdw-cf43412d-1730-4199-94af-a5d6c19675ca.jpg/v1/fill/w_1131,h_707,q_70,strp/koenigsegg_ghost_logo_by_dracu_teufel666_d5qrhdw-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA1MCIsInBhdGgiOiJcL2ZcL2VhNDAxZWNjLTVlNTgtNDAxZi1iYjU0LTZhMzUxZWQ5ZjYzOVwvZDVxcmhkdy1jZjQzNDEyZC0xNzMwLTQxOTktOTRhZi1hNWQ2YzE5Njc1Y2EuanBnIiwid2lkdGgiOiI8PTE2ODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.EzuFMlJqoAfiWhm6L6Algz6uc0uyZfi7JfRa2dwOYBw);
   background-size: cover;
   background-position: center;
 }
