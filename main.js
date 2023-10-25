@@ -51,7 +51,6 @@ elems.forEach((elem) => {
         ease: Expo.easeInOut,
         duration: 1,
       });
-    } else {
     }
   });
 });
